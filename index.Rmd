@@ -1,0 +1,73 @@
+---
+title: "Avian Spectrograph Video Creator"
+output: html_notebook
+---
+
+Original: https://marce10.github.io/2016/12/12/Create_dynamic_spectro_in_R.html
+
+```{r}
+require("warbleR")
+```
+
+```{r}
+download.file(url = "http://marceloarayasalas.weebly.com/uploads/2/5/5/2/25524573/0.sur.2014.7.3.8.31.wav", 
+    destfile = "example.wav")
+
+wav1 <- readWave("example.wav", from = 0, to = 19, units = "seconds")
+```
+
+
+```{r}
+tlimsize <- 1.5
+
+
+# frames per second
+fps <- 60
+
+#margin
+marg <- tlimsize / 2
+
+#add silence
+wav <-pastew(wave2 = silence(duration = marg, samp.rate = wav1@samp.rate, 
+            xunit = "time"), wave1 = wav1, f = wav@samp.rate, 
+            output = "Wave")
+
+wav <-pastew(wave1 = silence(duration = marg, samp.rate = wav@samp.rate, 
+            xunit = "time"), wave2 = wav, f = wav@samp.rate,
+            output = "Wave")
+```
+
+
+```{r}
+#start graphic device to create image files
+png("fee%04d.png", res = 240, width = 3840, height = 2160)
+
+x <- 0
+
+#loop to create image files 
+repeat {
+
+  tlim <- c(x, x + tlimsize)
+
+  spectro(wave = wav, f = wav@samp.rate, wl = 300, ovlp = 90, 
+          flim = c(2, 10.5), tlim = tlim, scale = F, grid = F, 
+          palette = gray.colors,  norm = F, dBref = 2*10e-5, 
+          osc = T, colgrid="white", colwave="chocolate2", 
+          colaxis="white", collab="white", colbg="black")
+  
+  abline(v = tlim[1]+marg, lty = 2, col = "skyblue", lwd = 2)
+  
+  x <- x + 1/fps
+  
+  # stop when the end is reached
+  if (x >= (length(wav@left)/wav@samp.rate) - tlimsize) break
+}
+
+dev.off()
+```
+
+```{r}
+system("ffmpeg -framerate 60 -i fee%04d.png -c:v libx264 -profile:v high -crf 2 -pix_fmt yuv420p spectro_movie.mp4")
+```
+
+
