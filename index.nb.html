@@ -178,19 +178,21 @@ $(document).ready(function () {
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVxdWlyZShcIndhcmJsZVJcIilcbmBgYCJ9 -->
 <pre class="r"><code>require(&quot;warbleR&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiB3YXJibGVSXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IG1hcHNcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogc2Vld2F2ZVxuTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiB0dW5lUlxuIn0= -->
-<pre><code>Loading required package: warbleR
-Loading required package: maps
-Loading required package: seewave
-Loading required package: tuneR</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZG93bmxvYWQuZmlsZSh1cmwgPSBcImh0dHA6Ly9tYXJjZWxvYXJheWFzYWxhcy53ZWVibHkuY29tL3VwbG9hZHMvMi81LzUvMi8yNTUyNDU3My8wLnN1ci4yMDE0LjcuMy44LjMxLndhdlwiLCBcbiAgICBkZXN0ZmlsZSA9IFwiZXhhbXBsZS53YXZcIilcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWFpbkRpciA8LSBcIi4vXCJcbnN1YkRpciA8LSBcInNvdXJjZVwiXG5pZmVsc2UoIWRpci5leGlzdHMoZmlsZS5wYXRoKG1haW5EaXIsIHN1YkRpcikpLCBkaXIuY3JlYXRlKGZpbGUucGF0aChtYWluRGlyLCBzdWJEaXIpKSwgRkFMU0UpXG5gYGAifQ== -->
+<pre class="r"><code>mainDir &lt;- &quot;./&quot;
+subDir &lt;- &quot;source&quot;
+ifelse(!dir.exists(file.path(mainDir, subDir)), dir.create(file.path(mainDir, subDir)), FALSE)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFXG4ifQ== -->
+<pre><code>[1] FALSE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZG93bmxvYWQuZmlsZSh1cmwgPSBcImh0dHA6Ly9tYXJjZWxvYXJheWFzYWxhcy53ZWVibHkuY29tL3VwbG9hZHMvMi81LzUvMi8yNTUyNDU3My8wLnN1ci4yMDE0LjcuMy44LjMxLndhdlwiLCBcbiAgICBkZXN0ZmlsZSA9IFwic291cmNlL2V4YW1wbGUud2F2XCIpXG5gYGAifQ== -->
 <pre class="r"><code>download.file(url = &quot;http://marceloarayasalas.weebly.com/uploads/2/5/5/2/25524573/0.sur.2014.7.3.8.31.wav&quot;, 
-    destfile = &quot;example.wav&quot;)</code></pre>
+    destfile = &quot;source/example.wav&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoidHJ5aW5nIFVSTCAnaHR0cDovL21hcmNlbG9hcmF5YXNhbGFzLndlZWJseS5jb20vdXBsb2Fkcy8yLzUvNS8yLzI1NTI0NTczLzAuc3VyLjIwMTQuNy4zLjguMzEud2F2J1xuQ29udGVudCB0eXBlICdhdWRpby94LXdhdicgbGVuZ3RoIDEwMDE0NTI0IGJ5dGVzICg5LjYgTUIpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCA5LjYgTUJcbiJ9 -->
 <pre><code>trying URL 'http://marceloarayasalas.weebly.com/uploads/2/5/5/2/25524573/0.sur.2014.7.3.8.31.wav'
@@ -198,8 +200,8 @@ Content type 'audio/x-wav' length 10014524 bytes (9.6 MB)
 ==================================================
 downloaded 9.6 MB</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud2F2MSA8LSByZWFkV2F2ZShcImV4YW1wbGUud2F2XCIsIGZyb20gPSAwLCB0byA9IDE5LCB1bml0cyA9IFwic2Vjb25kc1wiKVxuYGBgIn0= -->
-<pre class="r"><code>wav1 &lt;- readWave(&quot;example.wav&quot;, from = 0, to = 19, units = &quot;seconds&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud2F2MSA8LSByZWFkV2F2ZShcInNvdXJjZS9leGFtcGxlLndhdlwiLCBmcm9tID0gMCwgdG8gPSAxOSwgdW5pdHMgPSBcInNlY29uZHNcIilcbmBgYCJ9 -->
+<pre class="r"><code>wav1 &lt;- readWave(&quot;source/example.wav&quot;, from = 0, to = 19, units = &quot;seconds&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -223,13 +225,22 @@ wav &lt;-pastew(wave1 = silence(duration = marg, samp.rate = wav@samp.rate,
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI3N0YXJ0IGdyYXBoaWMgZGV2aWNlIHRvIGNyZWF0ZSBpbWFnZSBmaWxlc1xucG5nKFwiZmVlJTA0ZC5wbmdcIiwgcmVzID0gMjQwLCB3aWR0aCA9IDM4NDAsIGhlaWdodCA9IDIxNjApXG54IDwtIDBcbiNsb29wIHRvIGNyZWF0ZSBpbWFnZSBmaWxlcyBcbnJlcGVhdCB7XG4gIHRsaW0gPC0gYyh4LCB4ICsgdGxpbXNpemUpXG4gIHNwZWN0cm8od2F2ZSA9IHdhdiwgZiA9IHdhdkBzYW1wLnJhdGUsIHdsID0gMzAwLCBvdmxwID0gOTAsIFxuICAgICAgICAgIGZsaW0gPSBjKDIsIDEwLjUpLCB0bGltID0gdGxpbSwgc2NhbGUgPSBGLCBncmlkID0gRiwgXG4gICAgICAgICAgcGFsZXR0ZSA9IGdyYXkuY29sb3JzLCAgbm9ybSA9IEYsIGRCcmVmID0gMioxMGUtNSwgXG4gICAgICAgICAgb3NjID0gVCwgY29sZ3JpZD1cIndoaXRlXCIsIGNvbHdhdmU9XCJjaG9jb2xhdGUyXCIsIFxuICAgICAgICAgIGNvbGF4aXM9XCJ3aGl0ZVwiLCBjb2xsYWI9XCJ3aGl0ZVwiLCBjb2xiZz1cImJsYWNrXCIpXG4gIFxuICBhYmxpbmUodiA9IHRsaW1bMV0rbWFyZywgbHR5ID0gMiwgY29sID0gXCJza3libHVlXCIsIGx3ZCA9IDIpXG4gIFxuICB4IDwtIHggKyAxL2Zwc1xuICBcbiAgIyBzdG9wIHdoZW4gdGhlIGVuZCBpcyByZWFjaGVkXG4gIGlmICh4ID49IChsZW5ndGgod2F2QGxlZnQpL3dhdkBzYW1wLnJhdGUpIC0gdGxpbXNpemUpIGJyZWFrXG59XG5gYGAifQ== -->
-<pre class="r"><code>#start graphic device to create image files
-png(&quot;fee%04d.png&quot;, res = 240, width = 3840, height = 2160)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWFpbkRpciA8LSBcIi4vXCJcbnN1YkRpciA8LSBcImltZ1wiXG5cbmlmZWxzZSghZGlyLmV4aXN0cyhmaWxlLnBhdGgobWFpbkRpciwgc3ViRGlyKSksIGRpci5jcmVhdGUoZmlsZS5wYXRoKG1haW5EaXIsIHN1YkRpcikpLCBGQUxTRSlcblxuI3N0YXJ0IGdyYXBoaWMgZGV2aWNlIHRvIGNyZWF0ZSBpbWFnZSBmaWxlc1xucG5nKFwiaW1nL2ZlZSUwNGQucG5nXCIsIHJlcyA9IDI0MCwgd2lkdGggPSAzODQwLCBoZWlnaHQgPSAyMTYwKVxuXG54IDwtIDBcblxuI2xvb3AgdG8gY3JlYXRlIGltYWdlIGZpbGVzIFxucmVwZWF0IHtcblxuICB0bGltIDwtIGMoeCwgeCArIHRsaW1zaXplKVxuXG4gIHNwZWN0cm8od2F2ZSA9IHdhdiwgZiA9IHdhdkBzYW1wLnJhdGUsIHdsID0gMzAwLCBvdmxwID0gOTAsIFxuICAgICAgICAgIGZsaW0gPSBjKDIsIDEwLjUpLCB0bGltID0gdGxpbSwgc2NhbGUgPSBGLCBncmlkID0gRiwgXG4gICAgICAgICAgcGFsZXR0ZSA9IGdyYXkuY29sb3JzLCAgbm9ybSA9IEYsIGRCcmVmID0gMioxMGUtNSwgXG4gICAgICAgICAgb3NjID0gVCwgY29sZ3JpZD1cIndoaXRlXCIsIGNvbHdhdmU9XCJjaG9jb2xhdGUyXCIsIFxuICAgICAgICAgIGNvbGF4aXM9XCJ3aGl0ZVwiLCBjb2xsYWI9XCJ3aGl0ZVwiLCBjb2xiZz1cImJsYWNrXCIpXG4gIFxuICBhYmxpbmUodiA9IHRsaW1bMV0rbWFyZywgbHR5ID0gMiwgY29sID0gXCJza3libHVlXCIsIGx3ZCA9IDIpXG4gIFxuICB4IDwtIHggKyAxL2Zwc1xuICBcbiAgIyBzdG9wIHdoZW4gdGhlIGVuZCBpcyByZWFjaGVkXG4gIGlmICh4ID49IChsZW5ndGgod2F2QGxlZnQpL3dhdkBzYW1wLnJhdGUpIC0gdGxpbXNpemUpIGJyZWFrXG59XG5cbmRldi5vZmYoKVxuYGBgIn0= -->
+<pre class="r"><code>mainDir &lt;- &quot;./&quot;
+subDir &lt;- &quot;img&quot;
+
+ifelse(!dir.exists(file.path(mainDir, subDir)), dir.create(file.path(mainDir, subDir)), FALSE)
+
+#start graphic device to create image files
+png(&quot;img/fee%04d.png&quot;, res = 240, width = 3840, height = 2160)
+
 x &lt;- 0
+
 #loop to create image files 
 repeat {
+
   tlim &lt;- c(x, x + tlimsize)
+
   spectro(wave = wav, f = wav@samp.rate, wl = 300, ovlp = 90, 
           flim = c(2, 10.5), tlim = tlim, scale = F, grid = F, 
           palette = gray.colors,  norm = F, dBref = 2*10e-5, 
@@ -242,73 +253,28 @@ repeat {
   
   # stop when the end is reached
   if (x &gt;= (length(wav@left)/wav@samp.rate) - tlimsize) break
-}</code></pre>
+}
+
+dev.off()</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3lzdGVtKFwiZmZtcGVnIC1mcmFtZXJhdGUgNjAgLWkgZmVlJTA0ZC5wbmcgLWM6diBsaWJ4MjY0IC1wcm9maWxlOnYgaGlnaCAtY3JmIDIgLXBpeF9mbXQgeXV2NDIwcCBzcGVjdHJvX21vdmllLm1wNFwiKVxuYGBgIn0= -->
-<pre class="r"><code>system(&quot;ffmpeg -framerate 60 -i fee%04d.png -c:v libx264 -profile:v high -crf 2 -pix_fmt yuv420p spectro_movie.mp4&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWFpbkRpciA8LSBcIi4vXCJcbnN1YkRpciA8LSBcInZpZGVvXCJcblxuaWZlbHNlKCFkaXIuZXhpc3RzKGZpbGUucGF0aChtYWluRGlyLCBzdWJEaXIpKSwgZGlyLmNyZWF0ZShmaWxlLnBhdGgobWFpbkRpciwgc3ViRGlyKSksIEZBTFNFKVxuXG5cbnN5c3RlbShcImZmbXBlZyAtZnJhbWVyYXRlIDYwIC1pIGltZy9mZWUlMDRkLnBuZyAtYzp2IGxpYngyNjQgLXByb2ZpbGU6diBoaWdoIC1jcmYgMiAtcGl4X2ZtdCB5dXY0MjBwIHZpZGVvL3NwZWN0cm9fbW92aWUubXA0XCIpXG5gYGAifQ== -->
+<pre class="r"><code>mainDir &lt;- &quot;./&quot;
+subDir &lt;- &quot;video&quot;
+
+ifelse(!dir.exists(file.path(mainDir, subDir)), dir.create(file.path(mainDir, subDir)), FALSE)
+
+
+system(&quot;ffmpeg -framerate 60 -i img/fee%04d.png -c:v libx264 -profile:v high -crf 2 -pix_fmt yuv420p video/spectro_movie.mp4&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiZmZtcGVnIHZlcnNpb24gNC4wLjEgQ29weXJpZ2h0IChjKSAyMDAwLTIwMTggdGhlIEZGbXBlZyBkZXZlbG9wZXJzXG4gIGJ1aWx0IHdpdGggQXBwbGUgTExWTSB2ZXJzaW9uIDkuMS4wIChjbGFuZy05MDIuMC4zOS4yKVxuICBjb25maWd1cmF0aW9uOiAtLXByZWZpeD0vdXNyL2xvY2FsL0NlbGxhci9mZm1wZWcvNC4wLjEgLS1lbmFibGUtc2hhcmVkIC0tZW5hYmxlLXB0aHJlYWRzIC0tZW5hYmxlLXZlcnNpb24zIC0tZW5hYmxlLWhhcmRjb2RlZC10YWJsZXMgLS1lbmFibGUtYXZyZXNhbXBsZSAtLWNjPWNsYW5nIC0taG9zdC1jZmxhZ3M9IC0taG9zdC1sZGZsYWdzPSAtLWVuYWJsZS1ncGwgLS1lbmFibGUtbGlibXAzbGFtZSAtLWVuYWJsZS1saWJ4MjY0IC0tZW5hYmxlLWxpYnh2aWQgLS1lbmFibGUtb3BlbmNsIC0tZW5hYmxlLXZpZGVvdG9vbGJveCAtLWRpc2FibGUtbHptYVxuICBsaWJhdnV0aWwgICAgICA1Ni4gMTQuMTAwIC8gNTYuIDE0LjEwMFxuICBsaWJhdmNvZGVjICAgICA1OC4gMTguMTAwIC8gNTguIDE4LjEwMFxuICBsaWJhdmZvcm1hdCAgICA1OC4gMTIuMTAwIC8gNTguIDEyLjEwMFxuICBsaWJhdmRldmljZSAgICA1OC4gIDMuMTAwIC8gNTguICAzLjEwMFxuICBsaWJhdmZpbHRlciAgICAgNy4gMTYuMTAwIC8gIDcuIDE2LjEwMFxuICBsaWJhdnJlc2FtcGxlICAgNC4gIDAuICAwIC8gIDQuICAwLiAgMFxuICBsaWJzd3NjYWxlICAgICAgNS4gIDEuMTAwIC8gIDUuICAxLjEwMFxuICBsaWJzd3Jlc2FtcGxlICAgMy4gIDEuMTAwIC8gIDMuICAxLjEwMFxuICBsaWJwb3N0cHJvYyAgICA1NS4gIDEuMTAwIC8gNTUuICAxLjEwMFxuSW5wdXQgIzAsIGltYWdlMiwgZnJvbSAnZmVlJTA0ZC5wbmcnOlxuICBEdXJhdGlvbjogMDA6MDA6MDAuMzUsIHN0YXJ0OiAwLjAwMDAwMCwgYml0cmF0ZTogTi9BXG4gICAgU3RyZWFtICMwOjA6IFZpZGVvOiBwbmcsIHJnYmEocGMpLCAzODQweDIxNjAsIDYwIGZwcywgNjAgdGJyLCA2MCB0Ym4sIDYwIHRiY1xuU3RyZWFtIG1hcHBpbmc6XG4gIFN0cmVhbSAjMDowIC0+ICMwOjAgKHBuZyAobmF0aXZlKSAtPiBoMjY0IChsaWJ4MjY0KSlcblByZXNzIFtxXSB0byBzdG9wLCBbP10gZm9yIGhlbHBcbltsaWJ4MjY0IEAgMHg3ZmRlZWIwMDFlMDBdIHVzaW5nIGNwdSBjYXBhYmlsaXRpZXM6IE1NWDIgU1NFMkZhc3QgU1NTRTMgU1NFNC4yIEFWWCBGTUEzIEJNSTIgQVZYMlxuW2xpYngyNjQgQCAweDdmZGVlYjAwMWUwMF0gcHJvZmlsZSBIaWdoLCBsZXZlbCA1LjJcbltsaWJ4MjY0IEAgMHg3ZmRlZWIwMDFlMDBdIDI2NCAtIGNvcmUgMTUyIHIyODU0IGU5YTU5MDMgLSBILjI2NC9NUEVHLTQgQVZDIGNvZGVjIC0gQ29weWxlZnQgMjAwMy0yMDE3IC0gaHR0cDovL3d3dy52aWRlb2xhbi5vcmcveDI2NC5odG1sIC0gb3B0aW9uczogY2FiYWM9MSByZWY9MyBkZWJsb2NrPTE6MDowIGFuYWx5c2U9MHgzOjB4MTEzIG1lPWhleCBzdWJtZT03IHBzeT0xIHBzeV9yZD0xLjAwOjAuMDAgbWl4ZWRfcmVmPTEgbWVfcmFuZ2U9MTYgY2hyb21hX21lPTEgdHJlbGxpcz0xIDh4OGRjdD0xIGNxbT0wIGRlYWR6b25lPTIxLDExIGZhc3RfcHNraXA9MSBjaHJvbWFfcXBfb2Zmc2V0PS0yIHRocmVhZHM9MTIgbG9va2FoZWFkX3RocmVhZHM9MiBzbGljZWRfdGhyZWFkcz0wIG5yPTAgZGVjaW1hdGU9MSBpbnRlcmxhY2VkPTAgYmx1cmF5X2NvbXBhdD0wIGNvbnN0cmFpbmVkX2ludHJhPTAgYmZyYW1lcz0zIGJfcHlyYW1pZD0yIGJfYWRhcHQ9MSBiX2JpYXM9MCBkaXJlY3Q9MSB3ZWlnaHRiPTEgb3Blbl9nb3A9MCB3ZWlnaHRwPTIga2V5aW50PTI1MCBrZXlpbnRfbWluPTI1IHNjZW5lY3V0PTQwIGludHJhX3JlZnJlc2g9MCByY19sb29rYWhlYWQ9NDAgcmM9Y3JmIG1idHJlZT0xIGNyZj0yLjAgcWNvbXA9MC42MCBxcG1pbj0wIHFwbWF4PTY5IHFwc3RlcD00IGlwX3JhdGlvPTEuNDAgYXE9MToxLjAwXG5PdXRwdXQgIzAsIG1wNCwgdG8gJ3NwZWN0cm9fbW92aWUubXA0JzpcbiAgTWV0YWRhdGE6XG4gICAgZW5jb2RlciAgICAgICAgIDogTGF2ZjU4LjEyLjEwMFxuICAgIFN0cmVhbSAjMDowOiBWaWRlbzogaDI2NCAobGlieDI2NCkgKGF2YzEgLyAweDMxNjM3NjYxKSwgeXV2NDIwcCwgMzg0MHgyMTYwLCBxPS0xLS0xLCA2MCBmcHMsIDE1MzYwIHRibiwgNjAgdGJjXG4gICAgTWV0YWRhdGE6XG4gICAgICBlbmNvZGVyICAgICAgICAgOiBMYXZjNTguMTguMTAwIGxpYngyNjRcbiAgICBTaWRlIGRhdGE6XG4gICAgICBjcGI6IGJpdHJhdGUgbWF4L21pbi9hdmc6IDAvMC8wIGJ1ZmZlciBzaXplOiAwIHZidl9kZWxheTogLTFcbmZyYW1lPSAgICA1IGZwcz0wLjAgcT0wLjAgc2l6ZT0gICAgICAgMGtCIHRpbWU9MDA6MDA6MDAuMDAgYml0cmF0ZT1OL0Egc3BlZWQ9ICAgMHggICAgXG5mcmFtZT0gICAxNSBmcHM9IDE0IHE9MC4wIHNpemU9ICAgICAgIDBrQiB0aW1lPTAwOjAwOjAwLjAwIGJpdHJhdGU9Ti9BIHNwZWVkPSAgIDB4ICAgIFxuZnJhbWU9ICAgMjEgZnBzPTguMiBxPS0xLjAgTHNpemU9ICAgIDE4NTdrQiB0aW1lPTAwOjAwOjAwLjMwIGJpdHJhdGU9NTA2OTAuMmtiaXRzL3Mgc3BlZWQ9MC4xMTd4ICAgIFxudmlkZW86MTg1NmtCIGF1ZGlvOjBrQiBzdWJ0aXRsZTowa0Igb3RoZXIgc3RyZWFtczowa0IgZ2xvYmFsIGhlYWRlcnM6MGtCIG11eGluZyBvdmVyaGVhZDogMC4wNTY0MTQlXG5bbGlieDI2NCBAIDB4N2ZkZWViMDAxZTAwXSBmcmFtZSBJOjEgICAgIEF2ZyBRUDogNS42OSAgc2l6ZToxMzQ0NzhcbltsaWJ4MjY0IEAgMHg3ZmRlZWIwMDFlMDBdIGZyYW1lIFA6MTAgICAgQXZnIFFQOjEwLjg5ICBzaXplOjEwMjg2MlxuW2xpYngyNjQgQCAweDdmZGVlYjAwMWUwMF0gZnJhbWUgQjoxMCAgICBBdmcgUVA6MTIuMTQgIHNpemU6IDczNjQzXG5bbGlieDI2NCBAIDB4N2ZkZWViMDAxZTAwXSBjb25zZWN1dGl2ZSBCLWZyYW1lczogMjguNiUgMTkuMCUgMTQuMyUgMzguMSVcbltsaWJ4MjY0IEAgMHg3ZmRlZWIwMDFlMDBdIG1iIEkgIEkxNi4uNDogNDQuMSUgNTAuMSUgIDUuOCVcbltsaWJ4MjY0IEAgMHg3ZmRlZWIwMDFlMDBdIG1iIFAgIEkxNi4uNDogIDAuNCUgIDEuMSUgIDIuMyUgIFAxNi4uNDogIDIuNSUgIDEuNiUgIDEuMyUgIDAuMCUgIDAuMCUgICAgc2tpcDo5MC44JVxuW2xpYngyNjQgQCAweDdmZGVlYjAwMWUwMF0gbWIgQiAgSTE2Li40OiAgMC4wJSAgMC4wJSAgMS40JSAgQjE2Li44OiAgMy4yJSAgMS4zJSAgMC43JSAgZGlyZWN0OiAwLjYlICBza2lwOjkyLjclICBMMDo1Mi40JSBMMTo0MC43JSBCSTogNi45JVxuW2xpYngyNjQgQCAweDdmZGVlYjAwMWUwMF0gOHg4IHRyYW5zZm9ybSBpbnRyYTo0MC4wJSBpbnRlcjoyNC45JVxuW2xpYngyNjQgQCAweDdmZGVlYjAwMWUwMF0gY29kZWQgeSx1dkRDLHV2QUMgaW50cmE6IDIzLjglIDEuOCUgMS44JSBpbnRlcjogMy40JSAxLjAlIDEuMCVcbltsaWJ4MjY0IEAgMHg3ZmRlZWIwMDFlMDBdIGkxNiB2LGgsZGMscDogOTIlICA3JSAgMiUgIDAlXG5bbGlieDI2NCBAIDB4N2ZkZWViMDAxZTAwXSBpOCB2LGgsZGMsZGRsLGRkcix2cixoZCx2bCxodTogNjMlICAwJSAzNyUgIDAlICAwJSAgMCUgIDAlICAwJSAgMCVcbltsaWJ4MjY0IEAgMHg3ZmRlZWIwMDFlMDBdIGk0IHYsaCxkYyxkZGwsZGRyLHZyLGhkLHZsLGh1OiA4MCUgIDQlIDEwJSAgMSUgIDElICAyJSAgMCUgIDIlICAxJVxuW2xpYngyNjQgQCAweDdmZGVlYjAwMWUwMF0gaThjIGRjLGgsdixwOiA5OCUgIDElICAxJSAgMCVcbltsaWJ4MjY0IEAgMHg3ZmRlZWIwMDFlMDBdIFdlaWdodGVkIFAtRnJhbWVzOiBZOjAuMCUgVVY6MC4wJVxuW2xpYngyNjQgQCAweDdmZGVlYjAwMWUwMF0gcmVmIFAgTDA6IDQ2LjglICA0LjUlIDQwLjYlICA4LjElXG5bbGlieDI2NCBAIDB4N2ZkZWViMDAxZTAwXSByZWYgQiBMMDogNTMuMiUgNDUuOCUgIDEuMCVcbltsaWJ4MjY0IEAgMHg3ZmRlZWIwMDFlMDBdIHJlZiBCIEwxOiA5NS42JSAgNC40JVxuW2xpYngyNjQgQCAweDdmZGVlYjAwMWUwMF0ga2Ivczo0MzQxNy45MlxuIn0= -->
-<pre><code>ffmpeg version 4.0.1 Copyright (c) 2000-2018 the FFmpeg developers
-  built with Apple LLVM version 9.1.0 (clang-902.0.39.2)
-  configuration: --prefix=/usr/local/Cellar/ffmpeg/4.0.1 --enable-shared --enable-pthreads --enable-version3 --enable-hardcoded-tables --enable-avresample --cc=clang --host-cflags= --host-ldflags= --enable-gpl --enable-libmp3lame --enable-libx264 --enable-libxvid --enable-opencl --enable-videotoolbox --disable-lzma
-  libavutil      56. 14.100 / 56. 14.100
-  libavcodec     58. 18.100 / 58. 18.100
-  libavformat    58. 12.100 / 58. 12.100
-  libavdevice    58.  3.100 / 58.  3.100
-  libavfilter     7. 16.100 /  7. 16.100
-  libavresample   4.  0.  0 /  4.  0.  0
-  libswscale      5.  1.100 /  5.  1.100
-  libswresample   3.  1.100 /  3.  1.100
-  libpostproc    55.  1.100 / 55.  1.100
-Input #0, image2, from 'fee%04d.png':
-  Duration: 00:00:00.35, start: 0.000000, bitrate: N/A
-    Stream #0:0: Video: png, rgba(pc), 3840x2160, 60 fps, 60 tbr, 60 tbn, 60 tbc
-Stream mapping:
-  Stream #0:0 -&gt; #0:0 (png (native) -&gt; h264 (libx264))
-Press [q] to stop, [?] for help
-[libx264 @ 0x7fdeeb001e00] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
-[libx264 @ 0x7fdeeb001e00] profile High, level 5.2
-[libx264 @ 0x7fdeeb001e00] 264 - core 152 r2854 e9a5903 - H.264/MPEG-4 AVC codec - Copyleft 2003-2017 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=2.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
-Output #0, mp4, to 'spectro_movie.mp4':
-  Metadata:
-    encoder         : Lavf58.12.100
-    Stream #0:0: Video: h264 (libx264) (avc1 / 0x31637661), yuv420p, 3840x2160, q=-1--1, 60 fps, 15360 tbn, 60 tbc
-    Metadata:
-      encoder         : Lavc58.18.100 libx264
-    Side data:
-      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: -1
-frame=    5 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    
-frame=   15 fps= 14 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    
-frame=   21 fps=8.2 q=-1.0 Lsize=    1857kB time=00:00:00.30 bitrate=50690.2kbits/s speed=0.117x    
-video:1856kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.056414%
-[libx264 @ 0x7fdeeb001e00] frame I:1     Avg QP: 5.69  size:134478
-[libx264 @ 0x7fdeeb001e00] frame P:10    Avg QP:10.89  size:102862
-[libx264 @ 0x7fdeeb001e00] frame B:10    Avg QP:12.14  size: 73643
-[libx264 @ 0x7fdeeb001e00] consecutive B-frames: 28.6% 19.0% 14.3% 38.1%
-[libx264 @ 0x7fdeeb001e00] mb I  I16..4: 44.1% 50.1%  5.8%
-[libx264 @ 0x7fdeeb001e00] mb P  I16..4:  0.4%  1.1%  2.3%  P16..4:  2.5%  1.6%  1.3%  0.0%  0.0%    skip:90.8%
-[libx264 @ 0x7fdeeb001e00] mb B  I16..4:  0.0%  0.0%  1.4%  B16..8:  3.2%  1.3%  0.7%  direct: 0.6%  skip:92.7%  L0:52.4% L1:40.7% BI: 6.9%
-[libx264 @ 0x7fdeeb001e00] 8x8 transform intra:40.0% inter:24.9%
-[libx264 @ 0x7fdeeb001e00] coded y,uvDC,uvAC intra: 23.8% 1.8% 1.8% inter: 3.4% 1.0% 1.0%
-[libx264 @ 0x7fdeeb001e00] i16 v,h,dc,p: 92%  7%  2%  0%
-[libx264 @ 0x7fdeeb001e00] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 63%  0% 37%  0%  0%  0%  0%  0%  0%
-[libx264 @ 0x7fdeeb001e00] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 80%  4% 10%  1%  1%  2%  0%  2%  1%
-[libx264 @ 0x7fdeeb001e00] i8c dc,h,v,p: 98%  1%  1%  0%
-[libx264 @ 0x7fdeeb001e00] Weighted P-Frames: Y:0.0% UV:0.0%
-[libx264 @ 0x7fdeeb001e00] ref P L0: 46.8%  4.5% 40.6%  8.1%
-[libx264 @ 0x7fdeeb001e00] ref B L0: 53.2% 45.8%  1.0%
-[libx264 @ 0x7fdeeb001e00] ref B L1: 95.6%  4.4%
-[libx264 @ 0x7fdeeb001e00] kb/s:43417.92</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiQXZpYW4gU3BlY3Ryb2dyYXBoIFZpZGVvIENyZWF0b3IiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCk9yaWdpbmFsOiBodHRwczovL21hcmNlMTAuZ2l0aHViLmlvLzIwMTYvMTIvMTIvQ3JlYXRlX2R5bmFtaWNfc3BlY3Ryb19pbl9SLmh0bWwKCmBgYHtyfQpyZXF1aXJlKCJ3YXJibGVSIikKYGBgCgpgYGB7cn0KZG93bmxvYWQuZmlsZSh1cmwgPSAiaHR0cDovL21hcmNlbG9hcmF5YXNhbGFzLndlZWJseS5jb20vdXBsb2Fkcy8yLzUvNS8yLzI1NTI0NTczLzAuc3VyLjIwMTQuNy4zLjguMzEud2F2IiwgCiAgICBkZXN0ZmlsZSA9ICJleGFtcGxlLndhdiIpCgp3YXYxIDwtIHJlYWRXYXZlKCJleGFtcGxlLndhdiIsIGZyb20gPSAwLCB0byA9IDE5LCB1bml0cyA9ICJzZWNvbmRzIikKYGBgCgoKYGBge3J9CnRsaW1zaXplIDwtIDEuNQoKCiMgZnJhbWVzIHBlciBzZWNvbmQKZnBzIDwtIDYwCgojbWFyZ2luCm1hcmcgPC0gdGxpbXNpemUgLyAyCgojYWRkIHNpbGVuY2UKd2F2IDwtcGFzdGV3KHdhdmUyID0gc2lsZW5jZShkdXJhdGlvbiA9IG1hcmcsIHNhbXAucmF0ZSA9IHdhdjFAc2FtcC5yYXRlLCAKICAgICAgICAgICAgeHVuaXQgPSAidGltZSIpLCB3YXZlMSA9IHdhdjEsIGYgPSB3YXZAc2FtcC5yYXRlLCAKICAgICAgICAgICAgb3V0cHV0ID0gIldhdmUiKQoKd2F2IDwtcGFzdGV3KHdhdmUxID0gc2lsZW5jZShkdXJhdGlvbiA9IG1hcmcsIHNhbXAucmF0ZSA9IHdhdkBzYW1wLnJhdGUsIAogICAgICAgICAgICB4dW5pdCA9ICJ0aW1lIiksIHdhdmUyID0gd2F2LCBmID0gd2F2QHNhbXAucmF0ZSwKICAgICAgICAgICAgb3V0cHV0ID0gIldhdmUiKQpgYGAKCgpgYGB7cn0KI3N0YXJ0IGdyYXBoaWMgZGV2aWNlIHRvIGNyZWF0ZSBpbWFnZSBmaWxlcwpwbmcoImZlZSUwNGQucG5nIiwgcmVzID0gMjQwLCB3aWR0aCA9IDM4NDAsIGhlaWdodCA9IDIxNjApCgp4IDwtIDAKCiNsb29wIHRvIGNyZWF0ZSBpbWFnZSBmaWxlcyAKcmVwZWF0IHsKCiAgdGxpbSA8LSBjKHgsIHggKyB0bGltc2l6ZSkKCiAgc3BlY3Rybyh3YXZlID0gd2F2LCBmID0gd2F2QHNhbXAucmF0ZSwgd2wgPSAzMDAsIG92bHAgPSA5MCwgCiAgICAgICAgICBmbGltID0gYygyLCAxMC41KSwgdGxpbSA9IHRsaW0sIHNjYWxlID0gRiwgZ3JpZCA9IEYsIAogICAgICAgICAgcGFsZXR0ZSA9IGdyYXkuY29sb3JzLCAgbm9ybSA9IEYsIGRCcmVmID0gMioxMGUtNSwgCiAgICAgICAgICBvc2MgPSBULCBjb2xncmlkPSJ3aGl0ZSIsIGNvbHdhdmU9ImNob2NvbGF0ZTIiLCAKICAgICAgICAgIGNvbGF4aXM9IndoaXRlIiwgY29sbGFiPSJ3aGl0ZSIsIGNvbGJnPSJibGFjayIpCiAgCiAgYWJsaW5lKHYgPSB0bGltWzFdK21hcmcsIGx0eSA9IDIsIGNvbCA9ICJza3libHVlIiwgbHdkID0gMikKICAKICB4IDwtIHggKyAxL2ZwcwogIAogICMgc3RvcCB3aGVuIHRoZSBlbmQgaXMgcmVhY2hlZAogIGlmICh4ID49IChsZW5ndGgod2F2QGxlZnQpL3dhdkBzYW1wLnJhdGUpIC0gdGxpbXNpemUpIGJyZWFrCn0KCmRldi5vZmYoKQpgYGAKCmBgYHtyfQpzeXN0ZW0oImZmbXBlZyAtZnJhbWVyYXRlIDYwIC1pIGZlZSUwNGQucG5nIC1jOnYgbGlieDI2NCAtcHJvZmlsZTp2IGhpZ2ggLWNyZiAyIC1waXhfZm10IHl1djQyMHAgc3BlY3Ryb19tb3ZpZS5tcDQiKQpgYGAKCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiQXZpYW4gU3BlY3Ryb2dyYXBoIFZpZGVvIENyZWF0b3IiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCk9yaWdpbmFsOiBodHRwczovL21hcmNlMTAuZ2l0aHViLmlvLzIwMTYvMTIvMTIvQ3JlYXRlX2R5bmFtaWNfc3BlY3Ryb19pbl9SLmh0bWwKCmBgYHtyfQpyZXF1aXJlKCJ3YXJibGVSIikKYGBgCgpgYGB7cn0KbWFpbkRpciA8LSAiLi8iCnN1YkRpciA8LSAic291cmNlIgoKaWZlbHNlKCFkaXIuZXhpc3RzKGZpbGUucGF0aChtYWluRGlyLCBzdWJEaXIpKSwgZGlyLmNyZWF0ZShmaWxlLnBhdGgobWFpbkRpciwgc3ViRGlyKSksIEZBTFNFKQoKZG93bmxvYWQuZmlsZSh1cmwgPSAiaHR0cDovL21hcmNlbG9hcmF5YXNhbGFzLndlZWJseS5jb20vdXBsb2Fkcy8yLzUvNS8yLzI1NTI0NTczLzAuc3VyLjIwMTQuNy4zLjguMzEud2F2IiwgCiAgICBkZXN0ZmlsZSA9ICJzb3VyY2UvZXhhbXBsZS53YXYiKQoKd2F2MSA8LSByZWFkV2F2ZSgic291cmNlL2V4YW1wbGUud2F2IiwgZnJvbSA9IDAsIHRvID0gMTksIHVuaXRzID0gInNlY29uZHMiKQpgYGAKCgpgYGB7cn0KdGxpbXNpemUgPC0gMS41CgojIGZyYW1lcyBwZXIgc2Vjb25kCmZwcyA8LSA2MAoKI21hcmdpbgptYXJnIDwtIHRsaW1zaXplIC8gMgoKI2FkZCBzaWxlbmNlCndhdiA8LXBhc3Rldyh3YXZlMiA9IHNpbGVuY2UoZHVyYXRpb24gPSBtYXJnLCBzYW1wLnJhdGUgPSB3YXYxQHNhbXAucmF0ZSwgCiAgICAgICAgICAgIHh1bml0ID0gInRpbWUiKSwgd2F2ZTEgPSB3YXYxLCBmID0gd2F2QHNhbXAucmF0ZSwgCiAgICAgICAgICAgIG91dHB1dCA9ICJXYXZlIikKCndhdiA8LXBhc3Rldyh3YXZlMSA9IHNpbGVuY2UoZHVyYXRpb24gPSBtYXJnLCBzYW1wLnJhdGUgPSB3YXZAc2FtcC5yYXRlLCAKICAgICAgICAgICAgeHVuaXQgPSAidGltZSIpLCB3YXZlMiA9IHdhdiwgZiA9IHdhdkBzYW1wLnJhdGUsCiAgICAgICAgICAgIG91dHB1dCA9ICJXYXZlIikKYGBgCgoKYGBge3J9Cm1haW5EaXIgPC0gIi4vIgpzdWJEaXIgPC0gImltZyIKCmlmZWxzZSghZGlyLmV4aXN0cyhmaWxlLnBhdGgobWFpbkRpciwgc3ViRGlyKSksIGRpci5jcmVhdGUoZmlsZS5wYXRoKG1haW5EaXIsIHN1YkRpcikpLCBGQUxTRSkKCiNzdGFydCBncmFwaGljIGRldmljZSB0byBjcmVhdGUgaW1hZ2UgZmlsZXMKcG5nKCJpbWcvZmVlJTA0ZC5wbmciLCByZXMgPSAyNDAsIHdpZHRoID0gMzg0MCwgaGVpZ2h0ID0gMjE2MCkKCnggPC0gMAoKI2xvb3AgdG8gY3JlYXRlIGltYWdlIGZpbGVzIApyZXBlYXQgewoKICB0bGltIDwtIGMoeCwgeCArIHRsaW1zaXplKQoKICBzcGVjdHJvKHdhdmUgPSB3YXYsIGYgPSB3YXZAc2FtcC5yYXRlLCB3bCA9IDMwMCwgb3ZscCA9IDkwLCAKICAgICAgICAgIGZsaW0gPSBjKDIsIDEwLjUpLCB0bGltID0gdGxpbSwgc2NhbGUgPSBGLCBncmlkID0gRiwgCiAgICAgICAgICBwYWxldHRlID0gZ3JheS5jb2xvcnMsICBub3JtID0gRiwgZEJyZWYgPSAyKjEwZS01LCAKICAgICAgICAgIG9zYyA9IFQsIGNvbGdyaWQ9IndoaXRlIiwgY29sd2F2ZT0iY2hvY29sYXRlMiIsIAogICAgICAgICAgY29sYXhpcz0id2hpdGUiLCBjb2xsYWI9IndoaXRlIiwgY29sYmc9ImJsYWNrIikKICAKICBhYmxpbmUodiA9IHRsaW1bMV0rbWFyZywgbHR5ID0gMiwgY29sID0gInNreWJsdWUiLCBsd2QgPSAyKQogIAogIHggPC0geCArIDEvZnBzCiAgCiAgIyBzdG9wIHdoZW4gdGhlIGVuZCBpcyByZWFjaGVkCiAgaWYgKHggPj0gKGxlbmd0aCh3YXZAbGVmdCkvd2F2QHNhbXAucmF0ZSkgLSB0bGltc2l6ZSkgYnJlYWsKfQoKZGV2Lm9mZigpCmBgYAoKYGBge3J9Cm1haW5EaXIgPC0gIi4vIgpzdWJEaXIgPC0gInZpZGVvIgoKaWZlbHNlKCFkaXIuZXhpc3RzKGZpbGUucGF0aChtYWluRGlyLCBzdWJEaXIpKSwgZGlyLmNyZWF0ZShmaWxlLnBhdGgobWFpbkRpciwgc3ViRGlyKSksIEZBTFNFKQoKCnN5c3RlbSgiZmZtcGVnIC1mcmFtZXJhdGUgNjAgLWkgaW1nL2ZlZSUwNGQucG5nIC1jOnYgbGlieDI2NCAtcHJvZmlsZTp2IGhpZ2ggLWNyZiAyIC1waXhfZm10IHl1djQyMHAgdmlkZW8vc3BlY3Ryb19tb3ZpZS5tcDQiKQpgYGAKCgo=</div>
 
 
 

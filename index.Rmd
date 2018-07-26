@@ -10,16 +10,20 @@ require("warbleR")
 ```
 
 ```{r}
-download.file(url = "http://marceloarayasalas.weebly.com/uploads/2/5/5/2/25524573/0.sur.2014.7.3.8.31.wav", 
-    destfile = "example.wav")
+mainDir <- "./"
+subDir <- "source"
 
-wav1 <- readWave("example.wav", from = 0, to = 19, units = "seconds")
+ifelse(!dir.exists(file.path(mainDir, subDir)), dir.create(file.path(mainDir, subDir)), FALSE)
+
+download.file(url = "http://marceloarayasalas.weebly.com/uploads/2/5/5/2/25524573/0.sur.2014.7.3.8.31.wav", 
+    destfile = "source/example.wav")
+
+wav1 <- readWave("source/example.wav", from = 0, to = 19, units = "seconds")
 ```
 
 
 ```{r}
 tlimsize <- 1.5
-
 
 # frames per second
 fps <- 60
@@ -39,8 +43,13 @@ wav <-pastew(wave1 = silence(duration = marg, samp.rate = wav@samp.rate,
 
 
 ```{r}
+mainDir <- "./"
+subDir <- "img"
+
+ifelse(!dir.exists(file.path(mainDir, subDir)), dir.create(file.path(mainDir, subDir)), FALSE)
+
 #start graphic device to create image files
-png("fee%04d.png", res = 240, width = 3840, height = 2160)
+png("img/fee%04d.png", res = 240, width = 3840, height = 2160)
 
 x <- 0
 
@@ -67,7 +76,13 @@ dev.off()
 ```
 
 ```{r}
-system("ffmpeg -framerate 60 -i fee%04d.png -c:v libx264 -profile:v high -crf 2 -pix_fmt yuv420p spectro_movie.mp4")
+mainDir <- "./"
+subDir <- "video"
+
+ifelse(!dir.exists(file.path(mainDir, subDir)), dir.create(file.path(mainDir, subDir)), FALSE)
+
+
+system("ffmpeg -framerate 60 -i img/fee%04d.png -c:v libx264 -profile:v high -crf 2 -pix_fmt yuv420p video/spectro_movie.mp4")
 ```
 
 
